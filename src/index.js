@@ -77,7 +77,7 @@ function calculate(){
         g.fillStyle = "#f88" ; // Vermelho - Claro
         g.fill();
         g.font = "bold 12px sans-serif"; // Define uma fonte
-        g.fillText("Total Interest Payments", 20,20); // Desenha um texto na legenda
+        g.fillText("Pagamento de juros", 20,20); // Desenha um texto na legenda
 
         // O capital acumulado não é linear e é mais complicado de representar no gráfico
         var equity = 0;
@@ -95,7 +95,7 @@ function calculate(){
         g.closePath();
         g.fillStyle = "green"; // Agora usa tinta verde
         g.fill(); // E preenche a área sob a curva
-        g.fillText("Total Equity", 20,35); // Rotula em verde
+        g.fillText("Equidade total", 20,35); // Rotula em verde
 
         // Faz laço novamente, como acima, mas representa o saldo devedor como uma linha
         // preta grossa no gráfico
@@ -111,7 +111,7 @@ function calculate(){
         g.lineWidth = 3; // Usa uma linha grossa
         g.stroke(); // Desenha a curva do saldo
         g.fillStyle = "black"; // Troca para texto preto
-        g.fillText("Loan Balance", 20,50); // Entrada da legenda
+        g.fillText("Saldo do Empréstimo", 20,50); // Entrada da legenda
 
         g.textAlign = "center";
 
@@ -119,7 +119,7 @@ function calculate(){
         for (var year=1; year*12 <= payments; year++){
             var x = paymentToX(year*12); 
             g.fillRect(x-0.5,y-3,1,3);
-            if (year == 1) g.fillText("Year", x, y-5);
+            if (year == 1) g.fillText("Ano", x, y-5);
             if (year % 5 == 0 && year*12 !== payments) g.fillText(String(year), x, y-5);
         }
 
