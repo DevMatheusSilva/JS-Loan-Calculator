@@ -10,39 +10,35 @@
 <body>
     <table>
         <tr>
-            <th>Enter Loan Data:</th>
+            <th></th>
             <td></td>
-            <th>Loan Balance, Cumulative Equity and Interest Payments</th>
+            <th>Saldo do empréstimo, Equidade acumulada e Pagamento de Juros</th>
         </tr>
         <tr>
-            <td>Amount of the loan ($): </td>
+            <td>Valor do Empréstimo ($): </td>
             <td><input id="amount" onchange="calculate();"></td>
             <td rowspan=8>
                 <canvas id="graph" width="400" height="250"></canvas>
             </td>
         </tr>
         <tr>
-            <td>Anual interest (%):</td>
+            <td>Taxa de juros anual (%):</td>
             <td><input id="apr" onchange="calculate();"></td>
         </tr>
         <tr>
-            <td>Repayment Period (years):</td>
+            <td>Período de Reembolso (years):</td>
             <td><input id="years" onchange="calculate();"></td>
         </tr>
         <tr>
-            <td>Aproximate Payments:</td>
-            <td><button onclick="calculate();">Calculate</button></td>
-        </tr>
-        <tr>
-            <td>Monthly payment:</td>
+            <td>Pagamento mensal:</td>
             <td>$<span class="output" id="payment"></span></td>
         </tr>
         <tr>
-            <td>Total Payment:</td>
+            <td>Pagamento total:</td>
             <td>$<span class="output" id="total"></span></td>
         </tr>
         <tr>
-            <td>Total Interest:</td>
+            <td>Juros totais:</td>
             <td>$<span class="output" id="totalinterest"></span></td>
         </tr>
     </table>
