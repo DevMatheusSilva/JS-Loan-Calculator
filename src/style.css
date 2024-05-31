@@ -1,4 +1,4 @@
-body{
+    body{
     background-color: #032032;
     color: #FFFF;
     font-family: 'Source Sans 3';
@@ -33,7 +33,7 @@ body{
     padding-left: 20px;
 }
 
-/* RESUL-GRAPH */
+/* RESULT-GRAPH */
 .result-graph-group {
     display: flex;
     flex-direction: row;
