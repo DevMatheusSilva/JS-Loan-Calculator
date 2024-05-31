@@ -4,43 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap">
     <script src="index.js"></script>
     <title>Calculadora de Empréstimos</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th></th>
-            <td></td>
-            <th>Saldo do empréstimo, Equidade acumulada e Pagamento de Juros</th>
-        </tr>
-        <tr>
-            <td>Valor do Empréstimo ($): </td>
-            <td><input id="amount" onchange="calculate();"></td>
-            <td rowspan=8>
-                <canvas id="graph" width="400" height="250"></canvas>
-            </td>
-        </tr>
-        <tr>
-            <td>Taxa de juros anual (%):</td>
-            <td><input id="apr" onchange="calculate();"></td>
-        </tr>
-        <tr>
-            <td>Período de Reembolso (years):</td>
-            <td><input id="years" onchange="calculate();"></td>
-        </tr>
-        <tr>
-            <td>Pagamento mensal:</td>
-            <td>$<span class="output" id="payment"></span></td>
-        </tr>
-        <tr>
-            <td>Pagamento total:</td>
-            <td>$<span class="output" id="total"></span></td>
-        </tr>
-        <tr>
-            <td>Juros totais:</td>
-            <td>$<span class="output" id="totalinterest"></span></td>
-        </tr>
-    </table>
+    <!--Titulo da pagina-->
+    <h1 class="titulo">Calculadora de Empréstimos</h1>
+    
+    <!--O grupo de inputs-->
+    <div class="input-group">
+        <div class="input">
+            <label for="amount">Valor do Empréstimo ($):</label>
+            <input id="amount" placeholder="Qual o valor do empréstimo ?" onchange="calculate();">
+        </div>
+        <div class="input">
+            <label for="apr">Taxa de juros anual (%):</label>
+            <input id="apr" placeholder="Qual a taxa de juros anual ?" onchange="calculate();">
+        </div>
+        <div class="input">
+            <label for="years">Período de Reembolso (years):</label>
+            <input id="years" placeholder="Qual o período do reembolso ?" onchange="calculate();">
+        </div>
+    </div>
+    
+    <!--O grupo composto pelo gráfico e os resultados-->
+    <div class="result-graph-group">
+        <!--A div onde serão mostrados os resultados calculados-->
+        <div class="result-group">
+            <!--Pagamento total-->
+            <div class="result-item">
+                <label for="total">Pagamento total:</label>
+                $<span class="output" id="total"></span>
+            </div>
+
+            <!--Pagamento mensal-->
+            <div class="result-item">
+                <label for="payment">Pagamentos mensais:</label>
+                $<span class="output" id="payment"></span>
+            </div>
+            
+            <!--Juros Totais-->
+            <div class="result-item">
+                <label for="totalinterest">Juros totais:</label>
+                $<span class="output" id="totalinterest"></span>
+            </div>
+        </div>
+
+        <!--A div onde será mostrado o gráfico-->
+        <div class="graph-group">
+            <canvas id="graph" width="500" height="300"></canvas>
+        </div>
+    </div>
+
+    <div class="footer"></div>
 </body>
 </html>

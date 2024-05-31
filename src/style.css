@@ -1,16 +1,70 @@
-.output{
+body{
+    background-color: #032032;
+    color: #FFFF;
+    font-family: 'Source Sans 3';
+}
+
+.titulo{
+    color: #CFC091;
     font-weight: bold;
 }
 
-#payment{
-    text-decoration: underline;
+/* INPUT */
+.input-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
 }
 
-#graph{
-    border: solid black 1px;
+.input-group .input {
+    display: flex;
+    flex-direction: column;
 }
 
-th,td {
-    vertical-align: top;
+.input-group .input input {
+    background-color: transparent;
+    color: #FFFF;
+    width: 507px;
+    height: 50px;
+    border: 1px solid #FFFF;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding-left: 20px;
 }
 
+/* RESUL-GRAPH */
+.result-graph-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.result-graph-group .result-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 200px 0 100px;
+}
+
+.result-graph-group .result-group > .result-item{
+    padding: 25px;
+}
+
+.result-graph-group .graph-group{
+    border: 3px solid #264253;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* FOOTER */
+.footer{
+    background-color: #CFC091;
+    width: 100%;
+    height: 77px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
