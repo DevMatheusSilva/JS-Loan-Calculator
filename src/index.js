@@ -57,7 +57,9 @@ function calculate(){
     // Função para montar o gráfico
     function chart(principal, interest, monthly, payments){
         var graph = document.getElementById("graph");
-        graph.width = graph.width; // Redefinindo o canvas 
+        graph.width = graph.width; // Redefinindo o canvas
+        graph.height = graph.height
+
         if (arguments.length == 0 || !graph.getContext) return ; // Se nao passarmos nada, ou se o navegador nao suportar
 
         var g = graph.getContext("2d"); // Todo desenho é feito com esse objeto
@@ -74,9 +76,9 @@ function calculate(){
         g.lineTo(paymentToX(payments), amountToY(monthly.payments)) // Desenha ate o canto superior direito
         g.lineTo(paymentToX(payments), amountToY(0)) // Para baixo, até o canto inferior direito
         g.closePath(); // Volta ao inicio
-        g.fillStyle = "#f88" ; // Vermelho - Claro
+        g.fillStyle = "#CFC091" ; // Azul
         g.fill();
-        g.font = "bold 12px sans-serif"; // Define uma fonte
+        g.font = "bold 15px sans-serif"; // Define uma fonte
         g.fillText("Pagamento de juros", 20,20); // Desenha um texto na legenda
 
         // O capital acumulado não é linear e é mais complicado de representar no gráfico
@@ -93,9 +95,10 @@ function calculate(){
 
         g.lineTo(paymentToX(payments), amountToY(0)); // Linha de volta para o eixo x
         g.closePath();
-        g.fillStyle = "green"; // Agora usa tinta verde
+        g.fillStyle = "#264253"; // Agora usa tinta dourada
         g.fill(); // E preenche a área sob a curva
-        g.fillText("Equidade total", 20,35); // Rotula em verde
+        g.fillStyle = "#CFC091";
+        g.fillText("Equidade total", 20,35);
 
         // Faz laço novamente, como acima, mas representa o saldo devedor como uma linha
         // preta grossa no gráfico
@@ -110,7 +113,7 @@ function calculate(){
 
         g.lineWidth = 3; // Usa uma linha grossa
         g.stroke(); // Desenha a curva do saldo
-        g.fillStyle = "black"; // Troca para texto preto
+        g.fillStyle = "#CFC091"; // Troca para texto preto
         g.fillText("Saldo do Empréstimo", 20,50); // Entrada da legenda
 
         g.textAlign = "center";
