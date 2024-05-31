@@ -27,7 +27,6 @@ Este projeto é uma calculadora de empréstimos que permite aos usuários inseri
 
 1. Abra o arquivo `index.html` no seu navegador preferido.
 2. Insira o valor do empréstimo, a taxa de juros anual e o período de reembolso.
-3. Clique no botão "Calculate" para ver os resultados.
 
 ## Contribuição
 
@@ -48,12 +47,8 @@ Contribuições são bem-vindas! Se você quiser contribuir para este projeto, s
     ```
 5. Abra um Pull Request.
 
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ## Contato
 
-Matheus Silva - [seu email] - [seu perfil no LinkedIn/Twitter]
+Matheus Silva - [matheusmello225@gmail.com] - [www.linkedin.com/in/matheus-silva-ggn1089]
 
 Link do projeto: https://github.com/DevMatheusSilva/JS-Loan-Calculator
