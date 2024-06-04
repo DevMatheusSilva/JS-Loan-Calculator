@@ -27,6 +27,7 @@ Este projeto é uma calculadora de empréstimos que permite aos usuários inseri
 
 1. Abra o arquivo `index.html` no seu navegador preferido.
 2. Insira o valor do empréstimo, a taxa de juros anual e o período de reembolso.
+3. Analise os resultados e o gráfico gerado.
 
 ## Contribuição
 
